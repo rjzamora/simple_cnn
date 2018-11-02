@@ -1,3 +1,10 @@
+CXX=g++
+
 default all:
-	$(CXX) Example\ MNIST/example1.cpp -I . -o example1 -O3
-	$(CXX) Example\ MNIST/example2.cpp -I . -o example2 -O3
+	$(CXX) mnist_example/train_shallow.cpp -I . -o train_shallow -O3 -std=c++11 -g
+
+clean:
+	rm -rf train_shallow *.o *.dSYM
+
+run:
+	./train_shallow
